@@ -1,0 +1,65 @@
+@font-face {
+  font-family: Minecraft; /* Имя шрифта */
+  src: url("/fonts/minecraft.ttf"); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: Pixel; /* Имя шрифта */
+  src: url("/fonts/pixel.ttf"); /* Путь к файлу со шрифтом */
+}
+
+body {
+  background-image: url("/img/index-background.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  color: #fff;
+  background-color: rgb(110, 110, 110);
+  font-family: Minecraft;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 10px;
+  transition: ease 0.5s;
+  border: solid 5px black;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.language {
+  padding: 10px;
+  margin: 10px;
+  border: solid 5px black;
+  transition: ease 0.5s;
+  background-color: rgb(168, 168, 168);
+}
+
+.language:hover {
+  background-color: rgb(19, 226, 0);
+  border: solid 5px white;
+}
+
+div::selection {
+  color: #fff;
+  background-color: #000;
+}
+
+a::selection {
+  color: #fff;
+  background-color: #000;
+}

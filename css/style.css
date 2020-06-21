@@ -1,0 +1,9 @@
+@font-face {
+  font-family: Minecraft; /* Имя шрифта */
+  src: url("/fonts/minecraft.ttf"); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: Pixel; /* Имя шрифта */
+  src: url("/fonts/pixel.ttf"); /* Путь к файлу со шрифтом */
+}
