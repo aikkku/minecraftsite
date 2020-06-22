@@ -61,9 +61,18 @@ header {
   margin: 10px;
 }
 
+<<<<<<< HEAD
 .nav {
   display: flex;
   align-items: center;
+=======
+/* Какая-то ошибка с .nav  ---- это не ошибка, все работает как надо , так как ты и написал. А написал ты сам хз что*/ 
+/* зачем здесь маржин авто? зачем видз 25%*/
+.nav{
+  display: flex;
+  align-items: center;
+  
+>>>>>>> 4ae65aca51af43d0d4367b3843a73b8ab226767a
 }
 
 li {
@@ -73,5 +82,14 @@ li {
 .navlink {
   color: black;
   font-family: Pixel;
+<<<<<<< HEAD
   text-decoration: none;
 }
+=======
+}
+
+
+
+
+
+>>>>>>> 4ae65aca51af43d0d4367b3843a73b8ab226767a
