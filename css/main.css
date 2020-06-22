@@ -25,7 +25,6 @@ header {
 
 .menu {
   display: flex;
-  justify-content: space-between;
   background-color: rgb(110, 110, 110);
   border: solid 5px black;
 }
@@ -62,15 +61,20 @@ header {
   margin: 10px;
 }
 
-/* Какая-то ошибка с .nav */ 
-
+/* Какая-то ошибка с .nav  ---- это не ошибка, все работает как надо , так как ты и написал. А написал ты сам хз что*/ 
+/* зачем здесь маржин авто? зачем видз 25%*/
 .nav{
   display: flex;
-  margin: auto;
-  width: 25%;
+  align-items: center;
+  
 }
 
 .navlink a{
   color: black;
   font-family: Pixel;
 }
+
+
+
+
+
