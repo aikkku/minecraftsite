@@ -24,7 +24,8 @@ header {
 }
 
 .menu {
-  position: sticky;
+  display: flex;
+  justify-content: space-between;
   background-color: rgb(110, 110, 110);
   border: solid 5px black;
 }
@@ -50,11 +51,26 @@ header {
 }
 
 .social{
+  width: 100%;
+  margin-top: 20px;
   display: flex;
-  justify-items: space-between;
+  justify-content: space-around;
 }
 
 .social img{
   height: 50px;
   margin: 10px;
+}
+
+/* Какая-то ошибка с .nav */ 
+
+.nav{
+  display: flex;
+  margin: auto;
+  width: 25%;
+}
+
+.navlink a{
+  color: black;
+  font-family: Pixel;
 }
