@@ -37,19 +37,18 @@ body {
 }
 
 a {
+  background-color: rgb(168, 168, 168);
+  padding: 10px;
+  border: solid 5px black;
   color: rgb(255, 255, 255);
   text-decoration: none;
-}
-
-.language {
-  padding: 10px;
+  display: block;
   margin: 10px;
   border: solid 5px black;
   transition: ease 0.5s;
-  background-color: rgb(168, 168, 168);
 }
 
-.language:hover {
+a:hover {
   background-color: rgb(19, 226, 0);
   border: solid 5px white;
 }

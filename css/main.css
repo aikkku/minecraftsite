@@ -25,7 +25,6 @@ header {
 
 .menu {
   display: flex;
-  justify-content: space-between;
   background-color: rgb(110, 110, 110);
   border: solid 5px black;
 }
@@ -50,27 +49,29 @@ header {
   color: rgb(78, 78, 78);
 }
 
-.social{
+.social {
   width: 100%;
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
 }
 
-.social img{
+.social img {
   height: 50px;
   margin: 10px;
 }
 
-/* Какая-то ошибка с .nav */ 
-
-.nav{
+.nav {
   display: flex;
-  margin: auto;
-  width: 25%;
+  align-items: center;
 }
 
-.navlink a{
+li {
+  list-style: none;
+}
+
+.navlink {
   color: black;
   font-family: Pixel;
+  text-decoration: none;
 }
