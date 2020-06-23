@@ -57,8 +57,3 @@ div::selection {
   color: #fff;
   background-color: #000;
 }
-
-a::selection {
-  color: #fff;
-  background-color: #000;
-}

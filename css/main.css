@@ -21,7 +21,9 @@ body::selection {
 }
 
 header {
-  background-image: url("../img/index-background.png");
+  background-image: url("../img/headerback.png");
+  background-position: center;
+  background-attachment: fixed;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -51,7 +53,7 @@ header {
 
 .subtitle {
   font-family: pixel;
-  color: rgb(78, 78, 78);
+  color: green;
 }
 
 .nav {
@@ -98,30 +100,111 @@ ul {
   background-size: 70px;
 }
 
-.history{
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.historyimg {
+.contentimg {
   margin: 20px;
 }
 
-.historytitle {
+.contenttitle {
   font-family: Minecraft;
   color: white;
   margin: 20px;
   font-size: 30px;
 }
 
-.historyimg img {
+.contentimg img {
   border: solid 5px white;
   max-width: 700px;
 }
 
-.historytext {
+.contenttext {
+  color: white;
+  background-size: 70px;
+  padding: 10px;
   margin: 20px;
   font-family: Pixel;
   max-width: 800px;
+}
+
+.obsidian {
+  width: 100%;
+  height: 70px;
+  background-image: url("../img/Obsidian.png");
+  background-size: 70px;
+}
+
+.desk {
+  width: 100%;
+  height: 70px;
+  background-image: url("../img/desk.png");
+  background-size: 70px;
+}
+
+.fact {
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fact1 {
+  background-image: url(../img/fact1.png);
+}
+
+.fact2 {
+  background-image: url(../img/fact2.png);
+}
+
+.fact3 {
+  background-image: url(../img/fact3.png);
+}
+
+.fact4 {
+  background-image: url(../img/fact4.png);
+}
+
+.facttext {
+  color: green;
+  font-family: Pixel;
+  max-width: 800px;
+}
+
+.contentsubtitle {
+  font-family: Minecraft;
+  color: white;
+  margin: 20px;
+  margin-top: 40px;
+  font-size: 25px;
+}
+
+.contentbtn {
+  font-family: Minecraft;
+  color: black;
+  background-color: rgb(168, 168, 168);
+  padding: 10px;
+  border: solid 5px black;
+  text-decoration: none;
+  display: block;
+  margin: 10px;
+  border: solid 5px black;
+  transition: ease 0.5s;
+}
+
+.contentbtn:hover {
+  color: white;
+  background-color: rgb(19, 226, 0);
+  border: solid 5px white;
+}
+
+footer{
+  background-image: url("../img/pesok.jpg");
+  background-size: 70px;
 }
