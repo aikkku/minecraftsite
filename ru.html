@@ -10,10 +10,27 @@
     <meta name="keywords" content="Minecraft, Майнкрафт, CaveGame, Notch" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var menu = document.getElementById("menu");
+
+      var sticky = menu.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          menu.classList.add("sticky");
+        } else {
+          menu.classList.remove("sticky");
+        }
+      }
+    </script>
     <title>Про Майнкрафт</title>
   </head>
   <body>
-    <div class="menu">
+    <div class="menu" id="menu">
       <div class="logo">
         <img src="img/minecraft.svg" alt="logo" />
         Майнкрафт
@@ -23,7 +40,11 @@
           <li><a href="#history" class="navlink">История игры</a></li>
           <li><a href="#events" class="navlink">События</a></li>
           <li><a href="#download" class="navlink">Где скачать?</a></li>
-          <li><a href="en.html" class="navlink" target="_blank">On English</a></li>
+          <li>
+            <a href="en.html" class="languagelink" target="_blank"
+              >On English</a
+            >
+          </li>
         </ul>
       </nav>
       <!-- <div class="nav">
@@ -31,6 +52,22 @@
         <div class="navlink"><a href="">Популярность</a></div>
         <div class="navlink"><a href="">Советы</a></div>
       </div> -->
+      <script>
+        const anchors = document.querySelectorAll("a.navlink");
+
+        for (let anchor of anchors) {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const blockID = anchor.getAttribute("href");
+
+            document.querySelector(blockID).scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          });
+        }
+      </script>
     </div>
     <header>
       <div class="title">
@@ -206,7 +243,9 @@
         <div class="footerlinks">
           <a href="https://github.com/asilbekkod" target="_blank">GitHub</a>
           <a href="https://t.me/chelove4nost" target="_blank">Telegram</a>
-          <a href="https://instagram.com/bebeing404" target="_blank">Instagram</a>
+          <a href="https://instagram.com/bebeing404" target="_blank"
+            >Instagram</a
+          >
         </div>
       </div>
     </footer>

@@ -34,6 +34,9 @@ header {
   display: flex;
   background-color: rgb(110, 110, 110);
   border: solid 5px black;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .logo {
@@ -77,9 +80,25 @@ ul {
 }
 
 .navlink {
+  transition: ease 0.5s;
   color: black;
   font-family: Pixel;
   text-decoration: none;
+}
+
+.navlink:hover {
+  color: rgb(19, 226, 0);
+}
+
+.languagelink{
+  transition: ease 0.5s;
+  color: black;
+  font-family: Pixel;
+  text-decoration: none;
+}
+
+.languagelink:hover{
+  color: blue;
 }
 
 .social {
@@ -204,32 +223,32 @@ ul {
   border: solid 5px white;
 }
 
-footer{
+footer {
   background-image: url("../img/pesok.jpg");
   background-size: 70px;
   display: flex;
   justify-content: space-around;
 }
 
-.footerblock{
+.footerblock {
   color: rgba(0, 0, 0, 0.507);
   width: 500px;
   font-family: Pixel;
   padding: 50px;
 }
 
-.footerlinks a{
+.footerlinks a {
   transition: ease 0.5s;
   text-decoration: none;
   color: rgba(0, 0, 255, 0.507);
 }
 
-.footerlinks a:hover{
+.footerlinks a:hover {
   color: blue;
   text-shadow: 5px 5px 5px black;
 }
 
-.copyright{
+.copyright {
   font-family: sans-serif;
   display: flex;
   justify-content: center;
