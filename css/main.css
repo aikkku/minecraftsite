@@ -207,4 +207,30 @@ ul {
 footer{
   background-image: url("../img/pesok.jpg");
   background-size: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerblock{
+  color: rgba(0, 0, 0, 0.507);
+  width: 500px;
+  font-family: Pixel;
+  padding: 50px;
+}
+
+.footerlinks a{
+  transition: ease 0.5s;
+  text-decoration: none;
+  color: rgba(0, 0, 255, 0.507);
+}
+
+.footerlinks a:hover{
+  color: blue;
+  text-shadow: 5px 5px 5px black;
+}
+
+.copyright{
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
 }
