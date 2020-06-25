@@ -279,27 +279,40 @@ footer {
 }
 
 .slider {
-  width: 100%;
+  position: relative;
+  padding: 0px 60px;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
   display: flex;
-  justify-content: center;
-
 }
 
-.slider div img {
-  max-width: 1000px;
-  max-height: 700px;
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -30 0 0 0px;
+  z-index: 10;
+  font-size: 0;
+  width: 30px;
+  height: 60px;
 }
 
-
-.slider button {
-  padding: 5px;
-  background-color: rgba(19, 226, 0, 0.527);
-  border: none;
+.slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url(../img/back.svg) 0 0 / 100% no-repeat;
 }
 
-.slick-dots{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 10px;
+.slider .slick-arrow.slick-next {
+  right: 0;
+  background: url(../img/next.svg) 0 0 / 100% no-repeat;
+}
+
+.slider__item img {
+  width: 400px;
+  border: 5px solid rgb(19, 226, 0);
+  border-radius: 2%;
 }
