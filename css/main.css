@@ -280,7 +280,8 @@ footer {
 
 .slider {
   position: relative;
-  padding: 0px 60px;
+  padding: 0px 50px;
+  margin: 50px 10px;
 }
 
 .slick-list {
@@ -294,11 +295,12 @@ footer {
 .slider .slick-arrow {
   position: absolute;
   top: 50%;
-  margin: -30 0 0 0px;
-  z-index: 10;
+  margin: -30px 0 0 0px;
   font-size: 0;
   width: 30px;
   height: 60px;
+  outline: none;
+  border: none;
 }
 
 .slider .slick-arrow.slick-prev {
@@ -315,4 +317,9 @@ footer {
   width: 400px;
   border: 5px solid rgb(19, 226, 0);
   border-radius: 2%;
+  outline: none;
+}
+
+iframe{
+  border: 5px solid rgb(19, 226, 0);
 }

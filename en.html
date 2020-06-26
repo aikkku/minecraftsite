@@ -1,36 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="About Minecraft on English and Russian"
+      content="About Minecraft in English and Russian"
     />
     <meta name="keywords" content="Minecraft, Майнкрафт, CaveGame, Notch" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>About MInecraft</title>
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var menu = document.getElementById("menu");
+
+      var sticky = menu.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          menu.classList.add("sticky");
+        } else {
+          menu.classList.remove("sticky");
+        }
+      }
+    </script>
+    <title>About Minecraft</title>
   </head>
   <body>
-    <div class="menu">
+    <div class="menu" id="menu">
       <div class="logo">
         <img src="img/minecraft.svg" alt="logo" />
         Майнкрафт
       </div>
       <nav>
         <ul>
-          <li><a href="#history" class="navlink">История игры</a></li>
+          <li><a href="#slider" class="navlink">Фото</a></li>
           <li><a href="#events" class="navlink">События</a></li>
           <li><a href="#download" class="navlink">Где скачать?</a></li>
-          <li><a href="en.html" class="navlink" target="_blank">On English</a></li>
+          <li>
+            <a href="ru.html" class="languagelink" target="_blank"
+              >На Русском</a
+            >
+          </li>
         </ul>
       </nav>
-      <!-- <div class="nav">
-        <div class="navlink"><a href="">История игры</a></div>
-        <div class="navlink"><a href="">Популярность</a></div>
-        <div class="navlink"><a href="">Советы</a></div>
-      </div> -->
+      <script>
+        const anchors = document.querySelectorAll("a.navlink");
+
+        for (let anchor of anchors) {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const blockID = anchor.getAttribute("href");
+
+            document.querySelector(blockID).scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          });
+        }
+      </script>
     </div>
     <header>
       <div class="title">
@@ -44,27 +78,23 @@
         <a href="https://t.me/chelove4nost" class="sociallink"><img src="img/speechbubbles.svg" alt="Telegram" title="Telegram: chelove4nost" class="socialimg"></a>
       </div> -->
     </header>
-    <div class="grass"></div>
-    <div class="body" id="history">
-      <div class="content">
-        <div class="contenttitle">История игры</div>
-        <div class="contentimg">
-          <img src="img/firstmcversion.jpg" alt="One Of The Fist Version" />
+    <div class="grass" id="slider"></div>
+    <div class="body">
+      <div class="slider">
+        <div class="slider__item">
+          <img src="img/slide1.png" alt="slide" />
         </div>
-        <div class="contenttext">
-          Создателем Minecraft является Маркус Перссон, более известный под
-          ником Notch, а игра в самом начале имела совершенно другое название —
-          CaveGame, быстро изменившееся на привычное пользователям и уху —
-          Minecraft.
+        <div class="slider__item">
+          <img src="img/slide2.png" alt="slide" />
         </div>
-        <div class="contenttext">
-          Первый «билд» был разработан Маркусом в свободное от работы время в
-          канун нового года, а запуск в продакшн и последующая разработка
-          состоялась в мае 2009 года на специализированном форуме. В игре на тот
-          момент существовало лишь два блока: земли и булыжника. Карта
-          генерировалась совершенно странно и некрасиво, в мире не
-          проглядывалась логика и все что можно было делать — это передвигаться
-          и прыгать.
+        <div class="slider__item">
+          <img src="img/slide3.png" alt="slide" />
+        </div>
+        <div class="slider__item">
+          <img src="img/slide4.png" alt="slide" />
+        </div>
+        <div class="slider__item">
+          <img src="img/slide5.png" alt="slide" />
         </div>
       </div>
     </div>
@@ -77,8 +107,8 @@
       </div>
     </div>
     <!--Немного о разработчиках: Notch и Jeb_ (Маркус Перссон и Йенс Бергенстен, соответственно) были включены в 100 самых влиятельных людей планеты 2013 года по версии журнала "Time".-->
-    <div class="grass"></div>
-    <div class="body" id="events">
+    <div class="grass" id="events"></div>
+    <div class="body">
       <div class="content">
         <div class="contenttitle">Выпускной в Minecraft</div>
         <div class="contenttext">
@@ -128,7 +158,7 @@
           allowfullscreen
         ></iframe>
         <div class="contenttext">
-          Тому, кто это задумал будет очень трудно! Ведб земля не маленькая...
+          Тому, кто это задумал будет очень трудно! Ведь Земля не маленькая...
         </div>
         <div class="obsidian"></div>
       </div>
@@ -142,44 +172,48 @@
         которое знают и любят многие игроки.
       </div>
     </div>
-    <div class="grass"></div>
+    <div class="grass" id="download"></div>
     <div class="body">
       <div class="content">
         <div class="contenttitle" id="download">Где скачать?</div>
-        <div class="contentsubtitle">Windows OS</div>
-        <a
-          href="https://www.minecraft.net/ru-ru/store/minecraft-java-edition"
-          class="contentbtn"
-          target="_blank"
-          >Java Edition</a
-        >
-        <a
-          href="https://www.minecraft.net/store/minecraft-windows10"
-          class="contentbtn"
-          target="_blank"
-          >Windows 10 Edition</a
-        >
-        <div class="contentsubtitle">MacOS и Linux</div>
-        <a
-          href="https://www.minecraft.net/ru-ru/store/minecraft-java-edition"
-          class="contentbtn"
-          target="_blank"
-          >Java Edition</a
-        >
-        <div class="contentsubtitle">Android</div>
-        <a
-          href="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe"
-          class="contentbtn"
-          target="_blank"
-          >Google Play</a
-        >
-        <div class="contentsubtitle">iOS</div>
-        <a
-          href="https://apps.apple.com/app/minecraft-pocket-edition/id479516143"
-          class="contentbtn"
-          target="_blank"
-          >App Store</a
-        >
+        <div class="pclink">
+          <div class="contentsubtitle">Windows OS</div>
+          <a
+            href="https://www.minecraft.net/ru-ru/store/minecraft-java-edition"
+            class="contentbtn"
+            target="_blank"
+            >Java Edition</a
+          >
+          <a
+            href="https://www.minecraft.net/store/minecraft-windows10"
+            class="contentbtn"
+            target="_blank"
+            >Windows 10 Edition</a
+          >
+          <div class="contentsubtitle">MacOS и Linux</div>
+          <a
+            href="https://www.minecraft.net/ru-ru/store/minecraft-java-edition"
+            class="contentbtn"
+            target="_blank"
+            >Java Edition</a
+          >
+        </div>
+        <div class="mobilelink">
+          <div class="contentsubtitle">Android</div>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe"
+            class="contentbtn"
+            target="_blank"
+            >Google Play</a
+          >
+          <div class="contentsubtitle">iOS</div>
+          <a
+            href="https://apps.apple.com/app/minecraft-pocket-edition/id479516143"
+            class="contentbtn"
+            target="_blank"
+            >App Store</a
+          >
+        </div>
         <div class="contenttext">Все версии платные</div>
       </div>
       <div class="obsidian"></div>
@@ -206,10 +240,20 @@
         <div class="footerlinks">
           <a href="https://github.com/asilbekkod" target="_blank">GitHub</a>
           <a href="https://t.me/chelove4nost" target="_blank">Telegram</a>
-          <a href="https://instagram.com/bebeing404" target="_blank">Instagram</a>
+          <a href="https://instagram.com/bebeing404" target="_blank"
+            >Instagram</a
+          >
         </div>
       </div>
     </footer>
     <div class="copyright">Copyright © КОПИРАЙТ, 2020</div>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="slick/slick.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
   </body>
 </html>
