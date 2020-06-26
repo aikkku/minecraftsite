@@ -74,7 +74,7 @@ header {
 
 .subtitle {
   font-family: pixel;
-  color: green;
+  color: rgba(19, 226, 0, 0.664);
 }
 
 .nav {
@@ -209,9 +209,12 @@ ul {
 }
 
 .facttext {
-  color: green;
+  color: rgb(19, 226, 0);
   font-family: Pixel;
   max-width: 800px;
+  padding: 20px;
+  border: black 5px solid;
+  background-color: rgba(134, 134, 134, 0.5);
 }
 
 .contentsubtitle {
@@ -225,7 +228,7 @@ ul {
 .contentbtn {
   font-family: Minecraft;
   color: black;
-  background-color: rgb(168, 168, 168);
+  background-color: rgb(110, 110, 110);
   padding: 10px;
   border: solid 5px black;
   text-decoration: none;
@@ -272,12 +275,6 @@ footer {
   justify-content: center;
 }
 
-.facttext {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.548);
-  border: black solid 3px;
-}
-
 .slider {
   position: relative;
   padding: 0px 50px;
@@ -320,6 +317,32 @@ footer {
   outline: none;
 }
 
-iframe{
+iframe {
   border: 5px solid rgb(19, 226, 0);
+}
+
+.download {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.downloadlink{
+  background-color: rgba(134, 134, 134, 0.5);
+  border: 5px solid black;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.downloadtitle{
+  color: black;
+  text-align: center;
+}
+
+.slidertitle{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
