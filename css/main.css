@@ -311,7 +311,7 @@ footer {
 }
 
 .slider__item img {
-  width: 400px;
+  width: 350px;
   border: 5px solid rgb(19, 226, 0);
   border-radius: 2%;
   outline: none;
@@ -328,7 +328,7 @@ iframe {
   flex-wrap: wrap;
 }
 
-.downloadlink{
+.downloadlink {
   background-color: rgba(134, 134, 134, 0.5);
   border: 5px solid black;
   margin: 20px;
@@ -336,13 +336,84 @@ iframe {
   text-align: center;
 }
 
-.downloadtitle{
+.downloadtitle {
   color: black;
   text-align: center;
 }
 
-.slidertitle{
+.slidertitle {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+/* Style the tab */
+.tab {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  font-family: Pixel;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  padding: 6px 12px;
+  border: 2px solid rgb(255, 255, 255);
+  border-top: none;
+  background-color: rgba(19, 226, 0, 0.664);
+}
+
+.forflex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenttab {
+  width: 80%;
+  margin: 60px;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.contentlinks {
+  padding: 10px;
+  margin: 20px;
+  font-family: Pixel;
+  max-width: 800px;
+  color: #ffffff;
 }

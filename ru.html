@@ -115,6 +115,123 @@
     <div class="grass" id="events"></div>
     <div class="body">
       <div class="content">
+        <div class="contenttitle">События в Minecraft</div>
+        <div class="contenttab">
+          <div class="tab">
+            <button
+              class="tablinks"
+              onclick="openCity(event, 'London')"
+              id="defaultOpen"
+            >
+              Выпускной в Minecraft
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">
+              Копия Земли
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+              Программирование в Minecraft
+            </button>
+          </div>
+
+          <!-- Tab content -->
+          <div id="London" class="tabcontent">
+            <div class="forflex">
+              <div class="contenttext">
+                Из-за широкого распространения коронавируса по миру власти были
+                вынуждены отменить выпускные, чтобы не остаться без церемонии
+                японцы устроили выпускной в виртуальной реальности игры
+                Minecraft.
+              </div>
+              <iframe
+                class="youtube"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/_3R3czbmkbk"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="contenttext">
+                Пользователь R-creative создал специальный зал на сервере игры,
+                куда и пришли выпускники. Там каждый получил символический
+                аттестат, после чего выступил с речью.
+              </div>
+            </div>
+          </div>
+
+          <div id="Paris" class="tabcontent">
+            <div class="forflex">
+              <div class="contenttext">
+                Тем временем сидя на карантине в Майнкрафте начали постройку
+                модели Земли в реальном масштабе, то есть 1:1. Почему бы и нет?
+              </div>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/8_bW3ab8YAk"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="contenttext">
+                Тому, кто это задумал будет очень трудно! Ведь Земля не
+                маленькая...
+              </div>
+            </div>
+          </div>
+
+          <div id="Tokyo" class="tabcontent">
+            <div class="forflex">
+              <div class="contenttext">
+                Одной из особенностью Minecraft Education Edition является то,
+                что учащиеся знакомятся с программированием в данных сервисах не
+                выходя из Minecraft Education Edition. Для этого нужно открыть
+                Minecraft Education Edition, выбрать любой мир.
+              </div>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/41xhWetAL4Y"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="contentlinks">
+                Можно начать
+                <a href="https://code.org/minecraft">тут</a>
+                <a href="https://minecraft.makecode.com">и тут.</a>
+              </div>
+            </div>
+          </div>
+          <script>
+            function openCity(evt, cityName) {
+              // Declare all variables
+              var i, tabcontent, tablinks;
+
+              // Get all elements with class="tabcontent" and hide them
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+
+              // Get all elements with class="tablinks" and remove the class "active"
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(
+                  " active",
+                  ""
+                );
+              }
+
+              // Show the current tab, and add an "active" class to the button that opened the tab
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+
+            document.getElementById("defaultOpen").click();
+          </script>
+        </div>
+        <!--
         <div class="contenttitle">Выпускной в Minecraft</div>
         <div class="contenttext">
           Из-за широкого распространения коронавируса по миру власти были
@@ -164,7 +281,7 @@
         ></iframe>
         <div class="contenttext">
           Тому, кто это задумал будет очень трудно! Ведь Земля не маленькая...
-        </div>
+        </div> -->
         <div class="obsidian"></div>
       </div>
     </div>
