@@ -36,6 +36,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -61,7 +62,7 @@ header {
   z-index: 2;
 }
 
-.mobnav{
+.mobnav {
   display: none;
 }
 
@@ -223,6 +224,7 @@ ul {
   padding: 20px;
   border: black 5px solid;
   background-color: rgba(134, 134, 134, 0.5);
+  margin: 20px;
 }
 
 .contentsubtitle {
@@ -319,7 +321,7 @@ footer {
 }
 
 .slider__item img {
-  width: 350px;
+  width: 80%;
   border: 5px solid rgb(19, 226, 0);
   border-radius: 2%;
   outline: none;
@@ -474,6 +476,31 @@ iframe {
   font-size: 60px;
 }
 
+iframe{
+  height: 280px;
+  width: 500px;
+  margin: auto;
+}
+
+.copyright {
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px rgb(19, 226, 0),
+      0 0 4px #1700e6, 0 0 5px rgb(19, 226, 0), 0 0 6px #1700e6, 0 0 7px rgb(19, 226, 0);
+  }
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 3px rgb(19, 226, 0), 0 0 4px #1700e6,
+      0 0 5px rgb(19, 226, 0), 0 0 6px #1700e6, 0 0 7px rgb(19, 226, 0), 0 0 8px #1700e6;
+  }
+}
+
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
   .overlay a {
@@ -487,11 +514,11 @@ iframe {
 }
 
 @media screen and (max-device-width: 760px) {
-  .mobnav{
+  .mobnav {
     display: inline;
   }
 
-  .desknav{
+  .desknav {
     display: none;
   }
 
@@ -505,8 +532,7 @@ iframe {
     display: none;
   }
 
-  .navlink,
-  .languagelink {
+  .facttext {
     font-size: smaller;
   }
 
@@ -514,12 +540,18 @@ iframe {
     width: 40px;
   }
 
-  .slick-slide img{
+  .slick-slide img {
     width: 100px;
   }
 
-  .slick-arrow{
+  .slick-arrow {
     height: 40px;
     width: 20px;
+  }
+
+  iframe{
+    height: 140px;
+    width: 250px;
+    margin: auto;
   }
 }
