@@ -34,20 +34,124 @@
   <body>
     <div class="menu" id="menu">
       <div class="logo">
-        <img src="img/minecraft.svg" alt="logo" />
-        Майнкрафт
+        <img src="img/minecraft.svg" alt="logo" class="logoimg" />
+        <div class="logo_text">
+          Майнкрафт
+        </div>
       </div>
       <nav>
-        <ul>
-          <li><a href="#slider" class="navlink">Фото</a></li>
-          <li><a href="#events" class="navlink">События</a></li>
-          <li><a href="#download" class="navlink">Где скачать?</a></li>
-          <li>
-            <a href="en.html" class="languagelink" target="_blank"
-              >On English</a
+        <div class="desknav">
+          <ul>
+            <li><a href="#slider" class="navlink">Фото</a></li>
+            <li><a href="#events" class="navlink">События</a></li>
+            <li><a href="#download" class="navlink">Где скачать?</a></li>
+            <li>
+              <a href="en.html" class="languagelink" target="_blank"
+                >On English</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mobnav">
+          <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
             >
-          </li>
-        </ul>
+            <div class="overlay-content">
+              <a href="#slider" class="navlink" onclick="closeNav()">Фото</a>
+              <a href="#events" class="navlink" onclick="closeNav()">События</a>
+              <a href="#download" class="navlink" onclick="closeNav()"
+                >Где скачать?</a
+              >
+              <a
+                href="en.html"
+                class="languagelink"
+                target="_blank"
+                onclick="closeNav()"
+                >On English</a
+              >
+            </div>
+          </div>
+          <span
+            style="font-size: 30px; cursor: pointer;"
+            onclick="openNav()"
+            class="burger"
+            >&#9776;</span
+          >
+
+          <script>
+            function openNav() {
+              document.getElementById("myNav").style.height = "100%";
+            }
+
+            function closeNav() {
+              document.getElementById("myNav").style.height = "0%";
+            }
+          </script>
+          <style>
+            .burger {
+              margin: 20px;
+              width: 30px;
+              outline: none;
+            }
+
+            .overlay {
+              height: 0%;
+              width: 100%;
+              position: fixed;
+              z-index: 1;
+              top: 0;
+              left: 0;
+              background-color: rgb(0, 0, 0);
+              background-color: rgba(0, 0, 0, 0.9);
+              overflow-y: hidden;
+              transition: 0.5s;
+            }
+
+            .overlay-content {
+              position: relative;
+              top: 25%;
+              width: 100%;
+              text-align: center;
+              margin-top: 30px;
+            }
+
+            .overlay a {
+              padding: 8px;
+              text-decoration: none;
+              font-size: 36px;
+              color: #818181;
+              display: block;
+              transition: 0.3s;
+            }
+
+            .overlay a:hover,
+            .overlay a:focus {
+              color: #f1f1f1;
+            }
+
+            .overlay .closebtn {
+              position: absolute;
+              top: 20px;
+              right: 45px;
+              font-size: 60px;
+            }
+
+            @media screen and (max-height: 450px) {
+              .overlay {
+                overflow-y: auto;
+              }
+              .overlay a {
+                font-size: 20px;
+              }
+              .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+              }
+            }
+          </style>
+        </div>
       </nav>
       <script>
         const anchors = document.querySelectorAll("a.navlink");
@@ -390,7 +494,7 @@
         <div class="footerlinks">
           <a href="https://github.com/asilbekkod" target="_blank">GitHub</a>
           <a href="https://t.me/chelove4nost" target="_blank">Telegram</a>
-          <a href="https://instagram.com/bebeing404" target="_blank"
+          <a href="https://instagram.com/4el.png" target="_blank"
             >Instagram</a
           >
         </div>
