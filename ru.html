@@ -33,389 +33,413 @@
   </head>
   <body>
     <div>
-    <div class="menu" id="menu">
-      <div class="logo">
-        <img src="img/minecraft.svg" alt="logo" class="logoimg" />
-        <div class="logo_text">
-          Майнкрафт
-        </div>
-      </div>
-      <nav>
-        <div class="desknav">
-          <ul>
-            <li><a href="#slider" class="navlink">Фото</a></li>
-            <li><a href="#events" class="navlink">События</a></li>
-            <li><a href="#download" class="navlink">Где скачать?</a></li>
-            <li>
-              <a href="en.html" class="languagelink" target="_blank"
-                >On English</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="mobnav">
-          <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-              >&times;</a
-            >
-            <div class="overlay-content">
-              <a href="#slider" class="navlink" onclick="closeNav()">Фото</a>
-              <a href="#events" class="navlink" onclick="closeNav()">События</a>
-              <a href="#download" class="navlink" onclick="closeNav()"
-                >Где скачать?</a
-              >
-              <a
-                href="en.html"
-                class="languagelink"
-                target="_blank"
-                onclick="closeNav()"
-                >On English</a
-              >
-            </div>
+      <div class="menu" id="menu">
+        <div class="logo">
+          <img src="img/minecraft.svg" alt="logo" class="logoimg" />
+          <div class="logo_text">
+            Майнкрафт
           </div>
-          <span
-            style="font-size: 30px; cursor: pointer;"
-            onclick="openNav()"
-            class="burger"
-            >&#9776;</span
-          >
-
-          <script>
-            function openNav() {
-              document.getElementById("myNav").style.height = "100%";
-            }
-
-            function closeNav() {
-              document.getElementById("myNav").style.height = "0%";
-            }
-          </script>
-          <style>
-            .burger {
-              margin: 20px;
-              width: 30px;
-              outline: none;
-            }
-
-            .overlay {
-              height: 0%;
-              width: 100%;
-              position: fixed;
-              z-index: 1;
-              top: 0;
-              left: 0;
-              background-color: rgb(0, 0, 0);
-              background-color: rgba(0, 0, 0, 0.9);
-              overflow-y: hidden;
-              transition: 0.5s;
-            }
-
-            .overlay-content {
-              position: relative;
-              top: 25%;
-              width: 100%;
-              text-align: center;
-              margin-top: 30px;
-            }
-
-            .overlay a {
-              padding: 8px;
-              text-decoration: none;
-              font-size: 36px;
-              color: #818181;
-              display: block;
-              transition: 0.3s;
-            }
-
-            .overlay a:hover,
-            .overlay a:focus {
-              color: #f1f1f1;
-            }
-
-            .overlay .closebtn {
-              position: absolute;
-              top: 20px;
-              right: 45px;
-              font-size: 60px;
-            }
-
-            @media screen and (max-height: 450px) {
-              .overlay {
-                overflow-y: auto;
-              }
-              .overlay a {
-                font-size: 20px;
-              }
-              .overlay .closebtn {
-                font-size: 40px;
-                top: 15px;
-                right: 35px;
-              }
-            }
-          </style>
         </div>
-      </nav>
-      <script>
-        const anchors = document.querySelectorAll("a.navlink");
+        <nav>
+          <div class="desknav">
+            <ul>
+              <li><a href="#slider" class="navlink">Фото</a></li>
+              <li><a href="#events" class="navlink">События</a></li>
+              <li><a href="#download" class="navlink">Где скачать?</a></li>
+              <li>
+                <a href="en.html" class="languagelink" target="_blank"
+                  >On English</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mobnav">
+            <div id="myNav" class="overlay">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+              >
+              <div class="overlay-content">
+                <a href="#slider" class="navlink" onclick="closeNav()">Фото</a>
+                <a href="#events" class="navlink" onclick="closeNav()"
+                  >События</a
+                >
+                <a href="#download" class="navlink" onclick="closeNav()"
+                  >Где скачать?</a
+                >
+                <a
+                  href="en.html"
+                  class="languagelink"
+                  target="_blank"
+                  onclick="closeNav()"
+                  >On English</a
+                >
+              </div>
+            </div>
+            <span
+              style="font-size: 30px; cursor: pointer;"
+              onclick="openNav()"
+              class="burger"
+              >&#9776;</span
+            >
 
-        for (let anchor of anchors) {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
+            <script>
+              function openNav() {
+                document.getElementById("myNav").style.height = "100%";
+              }
 
-            const blockID = anchor.getAttribute("href");
+              function closeNav() {
+                document.getElementById("myNav").style.height = "0%";
+              }
+            </script>
+            <style>
+              .burger {
+                margin: 20px;
+                width: 30px;
+                outline: none;
+              }
 
-            document.querySelector(blockID).scrollIntoView({
-              behavior: "smooth",
-              block: "start",
+              .overlay {
+                height: 0%;
+                width: 100%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgb(0, 0, 0);
+                background-color: rgba(0, 0, 0, 0.9);
+                overflow-y: hidden;
+                transition: 0.5s;
+              }
+
+              .overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+              }
+
+              .overlay a {
+                padding: 8px;
+                text-decoration: none;
+                font-size: 36px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+              }
+
+              .overlay a:hover,
+              .overlay a:focus {
+                color: #f1f1f1;
+              }
+
+              .overlay .closebtn {
+                position: absolute;
+                top: 20px;
+                right: 45px;
+                font-size: 60px;
+              }
+
+              @media screen and (max-height: 450px) {
+                .overlay {
+                  overflow-y: auto;
+                }
+                .overlay a {
+                  font-size: 20px;
+                }
+                .overlay .closebtn {
+                  font-size: 40px;
+                  top: 15px;
+                  right: 35px;
+                }
+              }
+            </style>
+          </div>
+        </nav>
+        <script>
+          const anchors = document.querySelectorAll("a.navlink");
+
+          for (let anchor of anchors) {
+            anchor.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              const blockID = anchor.getAttribute("href");
+
+              document.querySelector(blockID).scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
             });
-          });
-        }
-      </script>
-    </div>
-    <header>
-      <div class="title">
-        <img src="img/Minecraft-Logo.png" alt="logo" />
+          }
+        </script>
       </div>
-      <div class="subtitle">Видео-игра</div>
-      <!-- <div class="social">
+      <header>
+        <div class="title">
+          <img src="img/Minecraft-Logo.png" alt="logo" />
+        </div>
+        <div class="subtitle">Видео-игра</div>
+        <!-- <div class="social">
         <a src="https://github.com/asilbekkod" class="sociallink"><img src="img/github.svg" alt="GitHub" title="GitHub: asilbekkod" class="socialimg"></a>
         <a src="https://instagram.com/r/bebeing404" class="sociallink"><img src="img/instagram.svg" alt="Instagram" title="Instagram: bebeing" class="socialimg"></a>
         <a href="https://vk.com/asillan" class="sociallink"><img src="img/vk.svg" alt="vk" title="Vk: asillan" class="socialimg"></a>
         <a href="https://t.me/chelove4nost" class="sociallink"><img src="img/speechbubbles.svg" alt="Telegram" title="Telegram: chelove4nost" class="socialimg"></a>
       </div> -->
-    </header>
-    <div class="grass" id="slider"></div>
-    <div class="body body1">
-      <div class="contenttitle contenttitle1">
-        <div>Создатели Minecraft</div>
-      </div>
-      <div class="content1">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img
-                src="img/notch.jpg"
-                alt="Avatar"
-                style="width: 300px; height: 200px; overflow: hidden;"
-              />
-            </div>
-            <div class="flip-card-back">
-              <h1>Маркус Перссон</h1>
-              <p>Программист и геймдизайнер</p>
-              <p>
-                Шведский программист и гейм-дизайнер. Известен как Notch. Был
-                владельцем компании Mojang AB, которую основал он в 2009 году.
-                Является создателем популярной компьютерной игры Minecraft.
-              </p>
-            </div>
-          </div>
+      </header>
+      <div class="grass" id="slider"></div>
+      <div class="body body1">
+        <div class="contenttitle contenttitle1">
+          <div>Создатели Minecraft</div>
         </div>
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img
-                src="img/yens.jpg"
-                alt="Avatar"
-                style="width: 300px; height: 200px;"
-              />
-            </div>
-            <div class="flip-card-back">
-              <h1>Йенс Бергенстен</h1>
-              <p>Геймдизайнер</p>
-              <p>
-                Известный как jeb_ — шведский геймдизайнер, сотрудник компании
-                Mojang Studios, ведущий разработчик Minecraft.
-              </p>
-            </div>
-          </div>
-        </div>
-        <style>
-          .contenttitle1 {
-            display: flex;
-            justify-content: center;
-          }
-
-          .content1 {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-          }
-          /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-          .flip-card {
-            background-color: transparent;
-            width: 300px;
-            height: 200px;
-            margin: 20px 0px;
-            perspective: 1000px; /* Remove this if you don't want the 3D effect */
-          }
-
-          /* This container is needed to position the front and back side */
-          .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-            border: rgb;
-          }
-
-          /* Do an horizontal flip when you move the mouse over the flip box container */
-          .flip-card:hover .flip-card-inner {
-            transform: rotateY(180deg);
-          }
-
-          /* Position the front and back side */
-          .flip-card-front,
-          .flip-card-back {
-            font-family: Pixel;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden; /* Safari */
-            backface-visibility: hidden;
-          }
-
-          .flip-card-back {
-            font-size: smaller;
-          }
-
-          /* Style the front side (fallback if image is missing) */
-          .flip-card-front {
-            background-color: #bbb;
-            color: black;
-          }
-
-          /* Style the back side */
-          .flip-card-back {
-            background-color: rgb(19, 226, 0);
-            color: white;
-            transform: rotateY(180deg);
-          }
-        </style>
-      </div>
-    </div>
-    <div class="obsidian"></div>
-    <div class="fact fact1">
-      <div class="facttext">
-        Немного о разработчиках: Notch и Jeb_ (Маркус Перссон и Йенс Бергенстен,
-        соответственно) были включены в 100 самых влиятельных людей планеты 2013
-        года по версии журнала "Time".
-      </div>
-    </div>
-    <!--Немного о разработчиках: Notch и Jeb_ (Маркус Перссон и Йенс Бергенстен, соответственно) были включены в 100 самых влиятельных людей планеты 2013 года по версии журнала "Time".-->
-    <div class="grass" id="events"></div>
-    <div class="body">
-      <div class="content">
-        <div class="contenttitle">События в Minecraft</div>
-        <div class="contenttab">
-          <div class="tab">
-            <button
-              class="tablinks"
-              onclick="openCity(event, 'London')"
-              id="defaultOpen"
-            >
-              Выпускной в Minecraft
-            </button>
-            <button class="tablinks" onclick="openCity(event, 'Paris')">
-              Копия Земли
-            </button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-              Программирование в Minecraft
-            </button>
-          </div>
-
-          <!-- Tab content -->
-          <div id="London" class="tabcontent">
-            <div class="forflex">
-              <div class="contenttext">
-                Из-за широкого распространения коронавируса по миру власти были
-                вынуждены отменить выпускные, чтобы не остаться без церемонии
-                японцы устроили выпускной в виртуальной реальности игры
-                Minecraft.
+        <div class="content1">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="img/notch.jpg"
+                  alt="Avatar"
+                  style="width: 300px; height: 200px; overflow: hidden;"
+                />
               </div>
-              <iframe
-                src="https://www.youtube.com/embed/_3R3czbmkbk"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <div class="contenttext">
-                Пользователь R-creative создал специальный зал на сервере игры,
-                куда и пришли выпускники. Там каждый получил символический
-                аттестат, после чего выступил с речью.
+              <div class="flip-card-back">
+                <h1>Маркус Перссон</h1>
+                <p>Программист и геймдизайнер</p>
+                <p>
+                  Шведский программист и гейм-дизайнер. Известен как Notch. Был
+                  владельцем компании Mojang AB, которую основал он в 2009 году.
+                  Является создателем популярной компьютерной игры Minecraft.
+                </p>
               </div>
             </div>
           </div>
-
-          <div id="Paris" class="tabcontent">
-            <div class="forflex">
-              <div class="contenttext">
-                Тем временем сидя на карантине в Майнкрафте начали постройку
-                модели Земли в реальном масштабе, то есть 1:1. Почему бы и нет?
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="img/yens.jpg"
+                  alt="Avatar"
+                  style="width: 300px; height: 200px;"
+                />
               </div>
-              <iframe
-                src="https://www.youtube.com/embed/8_bW3ab8YAk"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <div class="contenttext">
-                Тому, кто это задумал будет очень трудно! Ведь Земля не
-                маленькая...
-              </div>
-            </div>
-          </div>
-
-          <div id="Tokyo" class="tabcontent">
-            <div class="forflex">
-              <div class="contenttext">
-                Одной из особенностью Minecraft Education Edition является то,
-                что учащиеся знакомятся с программированием в данных сервисах не
-                выходя из Minecraft Education Edition. Для этого нужно открыть
-                Minecraft Education Edition, выбрать любой мир.
-              </div>
-              <iframe
-                src="https://www.youtube.com/embed/41xhWetAL4Y"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <div class="contentlinks">
-                Можно начать
-                <a href="https://code.org/minecraft">тут</a>
-                <a href="https://minecraft.makecode.com">и тут.</a>
+              <div class="flip-card-back">
+                <h1>Йенс Бергенстен</h1>
+                <p>Геймдизайнер</p>
+                <p>
+                  Известный как jeb_ — шведский геймдизайнер, сотрудник компании
+                  Mojang Studios, ведущий разработчик Minecraft.
+                </p>
               </div>
             </div>
           </div>
-          <script>
-            function openCity(evt, cityName) {
-              // Declare all variables
-              var i, tabcontent, tablinks;
-
-              // Get all elements with class="tabcontent" and hide them
-              tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-              }
-
-              // Get all elements with class="tablinks" and remove the class "active"
-              tablinks = document.getElementsByClassName("tablinks");
-              for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(
-                  " active",
-                  ""
-                );
-              }
-
-              // Show the current tab, and add an "active" class to the button that opened the tab
-              document.getElementById(cityName).style.display = "block";
-              evt.currentTarget.className += " active";
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="img/mojang.jpg"
+                  alt="Avatar"
+                  style="width: 300px; height: 200px;"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>Mojang Studios</h1>
+                <p>Компания</p>
+                <p>
+                  Компания, занимающаяся разработкой компьютерных игр,
+                  принадлежащая Xbox Game Studios. Наиболее известна как
+                  разработчик игры Minecraft. Основана в мае 2009 года Маркусом
+                  Перссоном.
+                </p>
+              </div>
+            </div>
+          </div>
+          <style>
+            .contenttitle1 {
+              display: flex;
+              justify-content: center;
             }
 
-            document.getElementById("defaultOpen").click();
-          </script>
+            .content1 {
+              display: flex;
+              justify-content: space-around;
+              flex-wrap: wrap;
+            }
+            /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+            .flip-card {
+              background-color: transparent;
+              width: 300px;
+              height: 200px;
+              margin: 20px 0px;
+              perspective: 1000px; /* Remove this if you don't want the 3D effect */
+            }
+
+            /* This container is needed to position the front and back side */
+            .flip-card-inner {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              transition: transform 0.8s;
+              transform-style: preserve-3d;
+              border: rgb;
+            }
+
+            /* Do an horizontal flip when you move the mouse over the flip box container */
+            .flip-card:hover .flip-card-inner {
+              transform: rotateY(180deg);
+            }
+
+            /* Position the front and back side */
+            .flip-card-front,
+            .flip-card-back {
+              font-family: Pixel;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              -webkit-backface-visibility: hidden; /* Safari */
+              backface-visibility: hidden;
+            }
+
+            .flip-card-back {
+              font-size: smaller;
+            }
+
+            /* Style the front side (fallback if image is missing) */
+            .flip-card-front {
+              background-color: #bbb;
+              color: black;
+            }
+
+            /* Style the back side */
+            .flip-card-back {
+              background-color: rgb(19, 226, 0);
+              color: white;
+              transform: rotateY(180deg);
+            }
+          </style>
         </div>
-        <!--
+      </div>
+      <div class="obsidian"></div>
+      <div class="fact fact1">
+        <div class="facttext">
+          Немного о разработчиках: Notch и Jeb_ (Маркус Перссон и Йенс
+          Бергенстен, соответственно) были включены в 100 самых влиятельных
+          людей планеты 2013 года по версии журнала "Time".
+        </div>
+      </div>
+      <!--Немного о разработчиках: Notch и Jeb_ (Маркус Перссон и Йенс Бергенстен, соответственно) были включены в 100 самых влиятельных людей планеты 2013 года по версии журнала "Time".-->
+      <div class="grass" id="events"></div>
+      <div class="body">
+        <div class="content">
+          <div class="contenttitle">События в Minecraft</div>
+          <div class="contenttab">
+            <div class="tab">
+              <button
+                class="tablinks"
+                onclick="openCity(event, 'London')"
+                id="defaultOpen"
+              >
+                Выпускной в Minecraft
+              </button>
+              <button class="tablinks" onclick="openCity(event, 'Paris')">
+                Копия Земли
+              </button>
+              <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+                Программирование в Minecraft
+              </button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="London" class="tabcontent">
+              <div class="forflex">
+                <div class="contenttext">
+                  Из-за широкого распространения коронавируса по миру власти
+                  были вынуждены отменить выпускные, чтобы не остаться без
+                  церемонии японцы устроили выпускной в виртуальной реальности
+                  игры Minecraft.
+                </div>
+                <iframe
+                  src="https://www.youtube.com/embed/_3R3czbmkbk"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+                <div class="contenttext">
+                  Пользователь R-creative создал специальный зал на сервере
+                  игры, куда и пришли выпускники. Там каждый получил
+                  символический аттестат, после чего выступил с речью.
+                </div>
+              </div>
+            </div>
+
+            <div id="Paris" class="tabcontent">
+              <div class="forflex">
+                <div class="contenttext">
+                  Тем временем сидя на карантине в Майнкрафте начали постройку
+                  модели Земли в реальном масштабе, то есть 1:1. Почему бы и
+                  нет?
+                </div>
+                <iframe
+                  src="https://www.youtube.com/embed/8_bW3ab8YAk"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+                <div class="contenttext">
+                  Тому, кто это задумал будет очень трудно! Ведь Земля не
+                  маленькая...
+                </div>
+              </div>
+            </div>
+
+            <div id="Tokyo" class="tabcontent">
+              <div class="forflex">
+                <div class="contenttext">
+                  Одной из особенностью Minecraft Education Edition является то,
+                  что учащиеся знакомятся с программированием в данных сервисах
+                  не выходя из Minecraft Education Edition. Для этого нужно
+                  открыть Minecraft Education Edition, выбрать любой мир.
+                </div>
+                <iframe
+                  src="https://www.youtube.com/embed/41xhWetAL4Y"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+                <div class="contentlinks">
+                  Можно начать
+                  <a href="https://code.org/minecraft">тут</a>
+                  <a href="https://minecraft.makecode.com">и тут.</a>
+                </div>
+              </div>
+            </div>
+            <script>
+              function openCity(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(
+                    " active",
+                    ""
+                  );
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+              }
+
+              document.getElementById("defaultOpen").click();
+            </script>
+          </div>
+          <!--
         <div class="contenttitle">Выпускной в Minecraft</div>
         <div class="contenttext">
           Из-за широкого распространения коронавируса по миру власти были
@@ -466,116 +490,118 @@
         <div class="contenttext">
           Тому, кто это задумал будет очень трудно! Ведь Земля не маленькая...
         </div> -->
+          <div class="obsidian"></div>
+        </div>
+      </div>
+      <div class="fact fact3">
+        <div class="facttext">
+          Один из самых странных персонажей Minecraft - крипер, электрически
+          заряженный шипящий хищник. Персон на самом деле и не думал сотворить
+          такое чудовище, он просто хотел создать свинью, но случайно перепутал
+          в коде координаты высоты и длины. Результатом такой ошибки стало
+          чудовище, которое знают и любят многие игроки.
+        </div>
+      </div>
+      <div class="grass" id="download"></div>
+      <div class="body">
+        <div class="content">
+          <div class="contenttitle" id="download">Где скачать?</div>
+          <div class="download">
+            <div class="downloadlink">
+              <div
+                class="contentsubtitle downloadtitle"
+                style="margin-top: 20px;"
+              >
+                Windows OS
+              </div>
+              <a
+                href="https://www.minecraft.net/ru-ru/store/minecraft-java-edition"
+                class="contentbtn"
+                target="_blank"
+                >Java Edition</a
+              >
+              <a
+                href="https://www.minecraft.net/store/minecraft-windows10"
+                class="contentbtn"
+                target="_blank"
+                >Windows 10 Edition</a
+              >
+            </div>
+            <div class="downloadlink">
+              <div
+                class="contentsubtitle downloadtitle"
+                style="margin-top: 20px;"
+              >
+                MacOS и Linux
+              </div>
+              <a
+                href="https://www.minecraft.net/ru-ru/store/minecraft-java-edition"
+                class="contentbtn"
+                target="_blank"
+                >Java Edition</a
+              >
+            </div>
+          </div>
+          <div class="download">
+            <div class="downloadlink">
+              <div
+                class="contentsubtitle downloadtitle"
+                style="margin-top: 20px;"
+              >
+                Android
+              </div>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe"
+                class="contentbtn"
+                target="_blank"
+                >Google Play</a
+              >
+            </div>
+            <div class="downloadlink">
+              <div
+                class="contentsubtitle downloadtitle"
+                style="margin-top: 20px;"
+              >
+                iOS
+              </div>
+              <a
+                href="https://apps.apple.com/app/minecraft-pocket-edition/id479516143"
+                class="contentbtn"
+                target="_blank"
+                >App Store</a
+              >
+            </div>
+          </div>
+          <div class="contenttext">Все версии платные</div>
+        </div>
         <div class="obsidian"></div>
       </div>
-    </div>
-    <div class="fact fact3">
-      <div class="facttext">
-        Один из самых странных персонажей Minecraft - крипер, электрически
-        заряженный шипящий хищник. Персон на самом деле и не думал сотворить
-        такое чудовище, он просто хотел создать свинью, но случайно перепутал в
-        коде координаты высоты и длины. Результатом такой ошибки стало чудовище,
-        которое знают и любят многие игроки.
+      <div class="fact fact4">
+        <div class="facttext">
+          В 2013 средняя школа имени Виктора Рудберга в Стокгольме представила
+          Minecraft в качестве обязательной части своей учебной программы для
+          всех 13-летних студентов. Преподаватели рассказывают, чему учит
+          студентов эта игра: «Они узнают о проблемах экологии, о создании
+          предметов и даже о том, как нужно планировать будущее».
+        </div>
       </div>
-    </div>
-    <div class="grass" id="download"></div>
-    <div class="body">
-      <div class="content">
-        <div class="contenttitle" id="download">Где скачать?</div>
-        <div class="download">
-          <div class="downloadlink">
-            <div
-              class="contentsubtitle downloadtitle"
-              style="margin-top: 20px;"
-            >
-              Windows OS
-            </div>
-            <a
-              href="https://www.minecraft.net/ru-ru/store/minecraft-java-edition"
-              class="contentbtn"
-              target="_blank"
-              >Java Edition</a
-            >
-            <a
-              href="https://www.minecraft.net/store/minecraft-windows10"
-              class="contentbtn"
-              target="_blank"
-              >Windows 10 Edition</a
-            >
-          </div>
-          <div class="downloadlink">
-            <div
-              class="contentsubtitle downloadtitle"
-              style="margin-top: 20px;"
-            >
-              MacOS и Linux
-            </div>
-            <a
-              href="https://www.minecraft.net/ru-ru/store/minecraft-java-edition"
-              class="contentbtn"
-              target="_blank"
-              >Java Edition</a
+      <div class="desk"></div>
+      <footer>
+        <div class="footerblock">
+          Особая благодарность Риму Каримову и Славе Шевченко!
+        </div>
+        <div class="footerblock">
+          Асилбек
+          <div class="footerlinks">
+            <a href="https://github.com/asilbekkod" target="_blank">GitHub</a>
+            <a href="https://t.me/chelove4nost" target="_blank">Telegram</a>
+            <a href="https://instagram.com/4el.png" target="_blank"
+              >Instagram</a
             >
           </div>
         </div>
-        <div class="download">
-          <div class="downloadlink">
-            <div
-              class="contentsubtitle downloadtitle"
-              style="margin-top: 20px;"
-            >
-              Android
-            </div>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe"
-              class="contentbtn"
-              target="_blank"
-              >Google Play</a
-            >
-          </div>
-          <div class="downloadlink">
-            <div
-              class="contentsubtitle downloadtitle"
-              style="margin-top: 20px;"
-            >
-              iOS
-            </div>
-            <a
-              href="https://apps.apple.com/app/minecraft-pocket-edition/id479516143"
-              class="contentbtn"
-              target="_blank"
-              >App Store</a
-            >
-          </div>
-        </div>
-        <div class="contenttext">Все версии платные</div>
-      </div>
-      <div class="obsidian"></div>
-    </div>
-    <div class="fact fact4">
-      <div class="facttext">
-        В 2013 средняя школа имени Виктора Рудберга в Стокгольме представила
-        Minecraft в качестве обязательной части своей учебной программы для всех
-        13-летних студентов. Преподаватели рассказывают, чему учит студентов эта
-        игра: «Они узнают о проблемах экологии, о создании предметов и даже о
-        том, как нужно планировать будущее».
-      </div>
-    </div>
-    <div class="desk"></div>
-    <footer>
-      <div class="footerblock">
-        Особая благодарность Риму Каримову и Славе Шевченко!
-      </div>
-      <div class="footerblock">
-        Асилбек
-        <div class="footerlinks">
-          <a href="https://github.com/asilbekkod" target="_blank">GitHub</a>
-          <a href="https://t.me/chelove4nost" target="_blank">Telegram</a>
-          <a href="https://instagram.com/4el.png" target="_blank">Instagram</a>
-        </div>
-      </div>
-    </footer>
-    <div class="copyright">Copyright © КОПИРАЙТ, 2020</div>
+      </footer>
+      <div class="copyright">Copyright © КОПИРАЙТ, 2020</div>
     </div>
 
     <!-- Зачем смотреть в код сайта, если можно посетить мой GitHub😜. Там ты можешь посмотреть процесс создания игры 🔁, на чем сайт писался 👩‍💻 и многое другое! Вот ссылка, если что: https://github.com/asilbekkod -->
