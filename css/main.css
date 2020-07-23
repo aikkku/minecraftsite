@@ -37,6 +37,7 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  box-sizing: content-box;
 }
 
 header {
@@ -265,7 +266,7 @@ footer {
   color: rgb(0, 0, 0);
   width: 500px;
   font-family: Pixel;
-  padding: 50px;
+  padding: 50px 20px;
 }
 
 .footerlinks a {
@@ -285,47 +286,7 @@ footer {
   justify-content: center;
 }
 
-.slider {
-  position: relative;
-  padding: 0px 50px;
-  margin: 50px 10px;
-}
 
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-track {
-  display: flex;
-}
-
-.slider .slick-arrow {
-  position: absolute;
-  top: 50%;
-  margin: -30px 0 0 0px;
-  font-size: 0;
-  width: 30px;
-  height: 60px;
-  outline: none;
-  border: none;
-}
-
-.slider .slick-arrow.slick-prev {
-  left: 0;
-  background: url(../img/back.svg) 0 0 / 100% no-repeat;
-}
-
-.slider .slick-arrow.slick-next {
-  right: 0;
-  background: url(../img/next.svg) 0 0 / 100% no-repeat;
-}
-
-.slider__item img {
-  width: 80%;
-  border: 5px solid rgb(19, 226, 0);
-  border-radius: 2%;
-  outline: none;
-}
 
 iframe {
   border: 5px solid rgb(19, 226, 0);
@@ -349,12 +310,6 @@ iframe {
 .downloadtitle {
   color: black;
   text-align: center;
-}
-
-.slidertitle {
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 /* Style the tab */
@@ -403,7 +358,7 @@ iframe {
 
 .contenttab {
   width: 80%;
-  margin: 60px;
+  margin: 10px auto;
 }
 
 .tabcontent {
@@ -462,7 +417,7 @@ iframe {
   transition: 0.3s; /* Transition effects on hover (color) */
 }
 
-/* When you mouse over the navigation links, change their color */
+/* When you mouse over the navigation links, change their coolr */
 .overlay a:hover,
 .overlay a:focus {
   color: #f1f1f1;
@@ -514,6 +469,9 @@ iframe{
 }
 
 @media screen and (max-device-width: 760px) {
+  ::-webkit-scrollbar{
+    display: none;
+  }
   .mobnav {
     display: inline;
   }
@@ -539,16 +497,7 @@ iframe{
   .logoimg {
     width: 40px;
   }
-
-  .slick-slide img {
-    width: 100px;
-  }
-
-  .slick-arrow {
-    height: 40px;
-    width: 20px;
-  }
-
+  
   iframe{
     height: 140px;
     width: 250px;

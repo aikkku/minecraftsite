@@ -32,6 +32,7 @@
     <title>Про Майнкрафт</title>
   </head>
   <body>
+    <div>
     <div class="menu" id="menu">
       <div class="logo">
         <img src="img/minecraft.svg" alt="logo" class="logoimg" />
@@ -183,28 +184,114 @@
       </div> -->
     </header>
     <div class="grass" id="slider"></div>
-    <div class="body">
-      <div class="slidertitle">
-        <div class="contenttitle">
-          Слайдер
-        </div>
+    <div class="body body1">
+      <div class="contenttitle contenttitle1">
+        <div>Создатели Minecraft</div>
       </div>
-      <div class="slider">
-        <div class="slider__item">
-          <img src="img/slide1.png" alt="slide" />
+      <div class="content1">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="img/notch.jpg"
+                alt="Avatar"
+                style="width: 300px; height: 200px; overflow: hidden;"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h1>Маркус Перссон</h1>
+              <p>Программист и геймдизайнер</p>
+              <p>
+                Шведский программист и гейм-дизайнер. Известен как Notch. Был
+                владельцем компании Mojang AB, которую основал он в 2009 году.
+                Является создателем популярной компьютерной игры Minecraft.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="slider__item">
-          <img src="img/slide2.png" alt="slide" />
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="img/yens.jpg"
+                alt="Avatar"
+                style="width: 300px; height: 200px;"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h1>Йенс Бергенстен</h1>
+              <p>Геймдизайнер</p>
+              <p>
+                Известный как jeb_ — шведский геймдизайнер, сотрудник компании
+                Mojang Studios, ведущий разработчик Minecraft.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="slider__item">
-          <img src="img/slide3.png" alt="slide" />
-        </div>
-        <div class="slider__item">
-          <img src="img/slide4.png" alt="slide" />
-        </div>
-        <div class="slider__item">
-          <img src="img/slide5.png" alt="slide" />
-        </div>
+        <style>
+          .contenttitle1 {
+            display: flex;
+            justify-content: center;
+          }
+
+          .content1 {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+          }
+          /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+          .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            margin: 20px 0px;
+            perspective: 1000px; /* Remove this if you don't want the 3D effect */
+          }
+
+          /* This container is needed to position the front and back side */
+          .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            border: rgb;
+          }
+
+          /* Do an horizontal flip when you move the mouse over the flip box container */
+          .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+          }
+
+          /* Position the front and back side */
+          .flip-card-front,
+          .flip-card-back {
+            font-family: Pixel;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+          }
+
+          .flip-card-back {
+            font-size: smaller;
+          }
+
+          /* Style the front side (fallback if image is missing) */
+          .flip-card-front {
+            background-color: #bbb;
+            color: black;
+          }
+
+          /* Style the back side */
+          .flip-card-back {
+            background-color: rgb(19, 226, 0);
+            color: white;
+            transform: rotateY(180deg);
+          }
+        </style>
       </div>
     </div>
     <div class="obsidian"></div>
@@ -477,10 +564,7 @@
     <div class="desk"></div>
     <footer>
       <div class="footerblock">
-        Особая благодарность Риму Каримову!
-        <div class="footerlinks">
-          <a href="https://github.com/Juanr1m" target="_blank">GitHub</a>
-        </div>
+        Особая благодарность Риму Каримову и Славе Шевченко!
       </div>
       <div class="footerblock">
         Асилбек
@@ -492,6 +576,9 @@
       </div>
     </footer>
     <div class="copyright">Copyright © КОПИРАЙТ, 2020</div>
+    </div>
+
+    <!-- Зачем смотреть в код сайта, если можно посетить мой GitHub😜. Там ты можешь посмотреть процесс создания игры 🔁, на чем сайт писался 👩‍💻 и многое другое! Вот ссылка, если что: https://github.com/asilbekkod -->
 
     <script
       type="text/javascript"
