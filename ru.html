@@ -75,12 +75,14 @@
                 >
               </div>
             </div>
-            <span
-              style="font-size: 30px; cursor: pointer;"
-              onclick="openNav()"
-              class="burger"
-              >&#9776;</span
-            >
+            <div style="display: flex; align-items: center;">
+              <span
+                style="font-size: 30px; cursor: pointer;"
+                onclick="openNav()"
+                class="burger"
+                >&#9776;</span
+              >
+            </div>
 
             <script>
               function openNav() {
@@ -337,13 +339,19 @@
                 onclick="openCity(event, 'London')"
                 id="defaultOpen"
               >
-                Выпускной в Minecraft
+                <div style="font-size: smaller;">
+                  Выпускной
+                </div>
               </button>
               <button class="tablinks" onclick="openCity(event, 'Paris')">
-                Копия Земли
+                <div style="font-size: smaller;">
+                  Копия Земли
+                </div>
               </button>
               <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-                Программирование в Minecraft
+                <div style="font-size: smaller;">
+                  Программирование
+                </div>
               </button>
             </div>
 
